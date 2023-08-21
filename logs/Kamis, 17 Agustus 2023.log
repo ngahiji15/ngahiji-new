@@ -1,0 +1,15 @@
+2023-08-17T06:46:33.911Z info: Server listening at http://localhost:3000
+2023-08-17T06:46:57.196Z info: Server listening at http://localhost:3000
+2023-08-17T06:48:10.068Z info: Server listening at http://localhost:3000
+2023-08-17T06:54:38.716Z info: Server listening at http://localhost:3000
+2023-08-17T06:55:01.169Z info: Server listening at http://localhost:3000
+2023-08-17T06:55:23.724Z error: /check-id/producr - ::1 - Exception, Please Check Your Code!
+2023-08-17T06:55:33.786Z error: /check-id/product - ::1 - Exception, Please Check Your Code!
+2023-08-17T06:55:37.464Z info: Server listening at http://localhost:3000
+2023-08-17T06:56:27.924Z error: /check-id/product - ::1 - Exception, Please Check Your Code!
+2023-08-17T06:57:35.893Z error: /check-id/barang - ::1 - last id from new_product adalah 3 
+2023-08-17T06:58:08.816Z info: Server listening at http://localhost:3000
+2023-08-17T07:08:36.719Z info: Server listening at http://localhost:3000
+2023-08-17T07:09:31.968Z info: Server listening at http://localhost:3000
+2023-08-17T07:15:01.382Z info: Server listening at http://localhost:3000
+2023-08-17T07:21:03.200Z info: Server listening at http://localhost:3000

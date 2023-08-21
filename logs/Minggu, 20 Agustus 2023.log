@@ -1,0 +1,24 @@
+2023-08-20T02:39:16.772Z info: Server listening at http://localhost:3000
+2023-08-20T08:00:50.044Z info: Server listening at http://localhost:3000
+2023-08-20T08:02:00.928Z info: Server listening at http://localhost:3000
+2023-08-20T08:02:22.478Z info: Server listening at http://localhost:3000
+2023-08-20T08:02:36.174Z info: Server listening at http://localhost:3000
+2023-08-20T08:03:35.728Z info: Server listening at http://localhost:3000
+2023-08-20T08:03:59.140Z info: Server listening at http://localhost:3000
+2023-08-20T08:05:34.531Z info: /create-transaction - ::1 - ============== Inisiasi Data =============
+2023-08-20T08:05:34.531Z info: /create-transaction - ::1 - {"name":"Test Alif","email":"ashddq.work@gmail.com","phone":"0822222222","invoice":"INV-NGAHIJI-ECAFJCCHFI","amount":"1200000","transaction_date":"Minggu, 20 Agustus 2023 15:5:31","transaction_update":"Minggu, 20 Agustus 2023 15:5:31","payment_method":"XENDIT CHECKOUT","status":"PENDING","product_id":"2","product_name":"Web Lanjutan","url_checkout":"https://checkout-staging.xendit.co/v2/64e1c94c0f31a2a428d0abda","expired":"no expired"}
+2023-08-20T08:05:34.532Z info: /create-transaction - ::1 - ============== Save to DB =============
+2023-08-20T08:05:34.533Z info: /create-transaction - ::1 - Transaction Created
+2023-08-20T08:11:00.538Z info: Server listening at http://localhost:3000
+2023-08-20T08:12:46.874Z info: Server listening at http://localhost:3000
+2023-08-20T08:18:53.151Z info: Server listening at http://localhost:3000
+2023-08-20T08:32:06.370Z info: Server listening at http://localhost:3000
+2023-08-20T09:31:57.804Z info: Server listening at http://localhost:3000
+2023-08-20T09:32:02.911Z info: /check-transaction - ::1 - ============== Get Data INV-NGAHIJI-EGFDIGJACI =============
+2023-08-20T09:32:02.911Z info: /check-transaction - ::1 - Data Collected
+2023-08-20T09:32:07.251Z info: /check-transaction - ::1 - ============== Get Data INV-NGAHIJI-EGFDIGJAC =============
+2023-08-20T09:32:07.252Z info: /check-transaction - ::1 - Data Collected
+2023-08-20T09:34:31.821Z info: Server listening at http://localhost:3000
+2023-08-20T09:34:55.583Z info: Server listening at http://localhost:3000
+2023-08-20T09:37:18.054Z info: Server listening at http://localhost:3000
+2023-08-20T09:37:23.464Z info: Server listening at http://localhost:3000

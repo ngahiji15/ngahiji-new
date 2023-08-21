@@ -1,4 +1,4 @@
-<%- include('layouts/header') %>
+<%- include('../layouts/header') %>
 <link href="/assets/css/checkout.css" rel="stylesheet">
 <section>
     <div class="container">
@@ -18,7 +18,9 @@
               <ul class="list-group mb-3">
                 <li class="list-group-item d-flex justify-content-between lh-sm">
                   <div>
+                    <h6 class="my-0"><b>DP 50%</b></h6>
                     <h6 class="my-0"><%= new_product_name %></h6>
+                    <small class="text-body-secondary">Estimasi Pengerjaan </br></small>
                     <small class="text-body-secondary">(<%= masa %>)</small>
                   </div>
                   <span class="text-body-secondary">Rp<%= new_product_price %></span>
@@ -146,7 +148,7 @@
         local = 'http://localhost:3000';
         aws = 'http://54.179.117.94';
         hostinger = 'https://ngahiji.xyz';
-        url = local+"/create-transaction";
+        url = hostinger+"/create-transaction";
 
         axios.post(url, body, {
                 headers: {
@@ -172,4 +174,4 @@
     });
 </script>
 
-<%- include('layouts/footer') %>
+<%- include('../layouts/footer') %>
