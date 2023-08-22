@@ -2487,7 +2487,7 @@ router.get('/result/:invoice', function(req, res){
         if (status == 'SUCCESS'){
             var thanks = 'Terimakasih';
             var hingga = 'hingga';
-            var words1 = 'ngahiji akan segera kirim akses layanan premium kamu.';
+            var words1 = 'ngahiji akan segera menghubungi kamu.';
             var expired = result.message[0].expired;
         }else{
             var thanks = 'Mohon cek email ya';
@@ -2641,7 +2641,7 @@ router.post('/create-transaction', function (req, res) {
                     return "Basic " + hash;
                 };
                 let userprod = 'xnd_production_mgLjR8teaeHNRWS4ignx0geUPdEW8q8JSwdzMeIxKctZwtq7XKzClefirFAbj';
-                let usersatging = 'xnd_development_VANcrBN1Ij02PFeYpo2JmGKZkt9p27Nxn2UpwACARx1PjvOfY5Ob32fjSHcEI8r'
+                let usersatging = 'xnd_development_jVhi54xnKbbHfHbFgGlNOYaxFOxmWbsKsxwfgyTWCYtZgwq1rdKgdNjW10r4V2';//'xnd_development_VANcrBN1Ij02PFeYpo2JmGKZkt9p27Nxn2UpwACARx1PjvOfY5Ob32fjSHcEI8r'
                 let pass = ''
             let authorization = authenticateUser(usersatging,pass);
             console.log(authorization);
@@ -3885,7 +3885,7 @@ router.post('/notification', function(req, res){
                                                                                                 <td class="pad">
                                                                                                     <div style="font-family: sans-serif">
                                                                                                         <div class style="font-size: 12px; font-family: 'Montserrat', 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif; mso-line-height-alt: 18px; color: #555555; line-height: 1.5;">
-                                                                                                            <p style="margin: 0; font-size: 14px; text-align: center; mso-line-height-alt: 21px;">Invoice : <span style="color:#000000;font-size:14px;"><strong>${invoice}<br></strong></span>Layanan : <span style="color:#000000;font-size:14px;"><strong>${layanan}<br></strong></span>Masa Berlaku : <span style="color:#000000;font-size:14px;"><strong>${masaberlaku}<br></strong></span>Waktu Transaksi : <span style="color:#000000;font-size:14px;"><strong>${date}<br></strong></span></p>
+                                                                                                            <p style="margin: 0; font-size: 14px; text-align: center; mso-line-height-alt: 21px;">Invoice : <span style="color:#000000;font-size:14px;"><strong>${invoice}<br></strong></span>Layanan : <span style="color:#000000;font-size:14px;"><strong>${layanan}<br></strong></span>Waktu Transaksi : <span style="color:#000000;font-size:14px;"><strong>${date}<br></strong></span></p>
                                                                                                         </div>
                                                                                                     </div>
                                                                                                 </td>
