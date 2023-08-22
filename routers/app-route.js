@@ -2495,7 +2495,7 @@ router.get('/result/:invoice', function(req, res){
             var expired = ' ';
             var hingga = ' ';
         }
-        res.render('result',{status,tanggaltransaksi, invoice, words1, detail, username, thanks, expired, hingga, product_name});
+        res.render('other/result',{status,tanggaltransaksi, invoice, words1, detail, username, thanks, expired, hingga, product_name});
         console.log(status);
         //if status pending
         //else
