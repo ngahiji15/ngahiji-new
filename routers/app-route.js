@@ -2341,6 +2341,8 @@ router.get('/checkout/:product', function(req, res){
         var product_id = 2;
     }else if(product == 'logo'){
         var product_id = 3;
+    }else if(product == 'test'){
+        var product_id = 4;
     }else{
         res.render('notfound');
     };
