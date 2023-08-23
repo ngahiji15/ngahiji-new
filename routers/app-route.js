@@ -3627,7 +3627,7 @@ router.post('/notification', function(req, res){
                             pass: 'F261396ff.'
                             }
                         });
-                        let url = 'https://ngahiji.xyz/';
+                        let url = 'https://ngahiji.xyz';
                         let invoice = invoicenumber2
                         let layanan = product_name;
                         let date = updatedate;
