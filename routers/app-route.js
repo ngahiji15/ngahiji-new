@@ -3558,16 +3558,6 @@ router.post('/notification', function(req, res){
         let invoicenumber2 = databody['external_id'];
         var productnotify = databody['description'];
         var statusnotif = databody['status'];
-        if (statusnotif == 'PAID'){
-            var newstatus = 'SUCCESS'
-        }else if(statusnotif == 'EXPIRED'){
-            var newstatus = 'EXPIRED'
-        }
-        console.log(productnotify);
-        const response = {
-            status: 'Success',
-            message: 'Thank You!'
-        };
         function getTransactionDate(){
             d = new Date();
             //Tanggal Bulan Tahun
@@ -3605,9 +3595,24 @@ router.post('/notification', function(req, res){
         }
         let masa = getExpired();
         console.log(masa);
-        console.log(response);
+        if (statusnotif === 'PAID'){
+            var newstatus = 'SUCCESS';
+            var sql = "UPDATE transaction SET transaction_update = '"+updatedate+"',status = '"+newstatus+"', expired = '"+masa+"' WHERE invoice_number = '" + invoicenumber2 + "'";
+            //console.log(sql);
+        }else if(statusnotif === 'EXPIRED'){
+            var newstatus = 'EXPIRED';
+            var sql = "UPDATE transaction SET transaction_update = '"+updatedate+"',status = '"+newstatus+"', expired = '"+masa+"' WHERE invoice_number = '" + invoicenumber2 + "'";
+            //console.log(sql);
+        }else{
+            console.log('not define');
+        }
+        console.log(newstatus);
+        console.log(productnotify);
+        console.log(statusnotif);
+        
         //update data DB
-        const sql = "UPDATE transaction SET transaction_update = '"+updatedate+"',status = '"+newstatus+"', expired = '"+masa+"' WHERE invoice_number = '" + invoicenumber2 + "'";
+        //const sql = "UPDATE transaction SET transaction_update = '"+updatedate+"',status = '"+newstatus+"', expired = '"+masa+"' WHERE invoice_number = '" + invoicenumber2 + "'";
+        //console.log(sql);
                db.query(sql, function (err, result) {
                    if (err) throw err;
                    console.log("Number of records inserted: " + result.affectedRows);
@@ -3621,6 +3626,7 @@ router.post('/notification', function(req, res){
                     let amount = result[0].amount;
                     let product_name = result[0].product_name;
                     let product_id = result[0].product_id;
+                    let finalstatus = result[0].status;
                     console.log(result);
                      //kirim email
                         const transporter = nodemailer.createTransport({
@@ -3701,7 +3707,7 @@ router.post('/notification', function(req, res){
                         };
 
                         let url5 = url + '/add-user';
-                        if(newstatus = 'SUCCESS'){
+                        if(finalstatus === 'SUCCESS'){
                         fetch(url5, requestOptions)
                         .then(response => response.json())
                         .then(result => {
@@ -4063,7 +4069,7 @@ router.post('/notification', function(req, res){
                         // async..await is not allowed in global scope, must use a wrapper
                             // send mail with defined transport object
                             
-                        }else if(newstatus = 'EXPIRED'){
+                        }else if(finalstatus === 'EXPIRED'){
                             var mailOptions = {
                                 from: 'Ngahiji Customer Service<cs@ngahiji.xyz>',
                                 to: email,
@@ -4387,6 +4393,10 @@ router.post('/notification', function(req, res){
 
                             
                  });
+            const response = {
+            status: 'Success',
+            message: 'Thank You!'
+        };
         res.status(200);
         res.json(response);
     
